@@ -1,6 +1,4 @@
-from multiprocessing import Value
 import requests
-from pprint import pprint
 
 URL = "http://127.0.0.1:5000/anime/all"
 

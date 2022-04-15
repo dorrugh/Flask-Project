@@ -7,13 +7,13 @@ from anime_data import anime
 app = Flask(__name__)
 
 
+@app.route('/', methods=['GET'])
 @app.route('/<username>', methods=['GET'])
-@app.route('/')
 def home(username):
     return render_template("index.html", name=username)
 
 
-@app.route('/anime/all')
+@app.route('/anime/all', methods=['GET'])
 def all():
     return jsonify(anime)
 
